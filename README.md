@@ -11,7 +11,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /u
 ## 2. install llvm 10.0
 ```
 sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
-https://github.com/llvm/llvm-project.git
+// git clone https://github.com/llvm/llvm-project.git
 cd llvm-project
 git checkout release/10.x
 mkdir build
