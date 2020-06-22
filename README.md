@@ -34,10 +34,11 @@ patch -p1 < ./../patch/gzip.diff
 
 ## 4. make 
 ```
-make allyesconfig
-scripts/config --disable CONFIG_X86_DECODER_SELFTEST
-scripts/config --disable CONFIG_MODULE_SIG
-scripts/config --disable CONFIG_DEBUG_INFO
+// make allyesconfig
+// scripts/config --disable CONFIG_X86_DECODER_SELFTEST
+// scripts/config --disable CONFIG_MODULE_SIG
+// scripts/config --disable CONFIG_DEBUG_INFO
+
 export PATH=/usr/local/llvm-10/bin:$PATH
 make -j4 LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
 ```
