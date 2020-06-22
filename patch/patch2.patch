@@ -1,0 +1,16 @@
+diff --git a/arch/x86/boot/setup.ld b/arch/x86/boot/setup.ld
+index 0149e41d42c2..3da1c37c6dd5 100644
+--- a/arch/x86/boot/setup.ld
++++ b/arch/x86/boot/setup.ld
+@@ -51,7 +51,10 @@ SECTIONS
+ 	. = ALIGN(16);
+ 	_end = .;
+ 
+-	/DISCARD/ : { *(.note*) }
++	/DISCARD/	: {
++		*(.eh_frame)
++		*(.note*)
++	}
+ 
+ 	/*
+ 	 * The ASSERT() sink to . is intentional, for binutils 2.14 compatibility:
