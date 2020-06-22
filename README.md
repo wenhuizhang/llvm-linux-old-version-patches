@@ -39,5 +39,13 @@ scripts/config --disable CONFIG_X86_DECODER_SELFTEST
 scripts/config --disable CONFIG_MODULE_SIG
 scripts/config --disable CONFIG_DEBUG_INFO
 export PATH=/usr/local/llvm-10/bin:$PATH
-make -j`nproc --all` LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
+make -j4 LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
+```
+
+## 5. install
+```
+sudo make modules_install
+sudo make install
+sudo grub-update2
+sudo reboot
 ```
