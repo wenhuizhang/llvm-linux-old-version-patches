@@ -68,6 +68,6 @@ make -j4 LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
 ```
 sudo make modules_install
 sudo make install
-sudo grub-update2
+sudo update-grub2
 sudo reboot
 ```
