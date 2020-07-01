@@ -1,11 +1,19 @@
 # llvm-linux
 
-## 1. install gcc 9
+## 1. install gcc 9 and ninja
 ```
 sudo add-apt-repository ppa:jonathonf/gcc-9.0
 sudo apt update
 sudo apt-get install gcc-9 g++-9
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+```
+
+```
+git clone git://github.com/martine/ninja.git
+cd ninja/
+./configure.py --bootstrap
+sudo cp ninja /usr/local/bin/
+sudo chmod a+rx /usr/local/bin/ninja
 ```
 
 ## 2. install llvm 10.0
