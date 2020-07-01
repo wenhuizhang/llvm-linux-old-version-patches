@@ -1,4 +1,4 @@
-# llvm-linux-5.4
+# llvm-linux
 
 ## 1. install gcc 9
 ```
@@ -25,11 +25,12 @@ ninja
 sudo ninja install
 ```
 
-## 3. add patch to linux5.4 and compile
+## 3. add patch to linux and compile
+For Linux 5.4
 ```
-patch -p1 < ./../patch/patch1.patch
-patch -p1 < ./../patch/patch2.patch
-patch -p1 < ./../patch/gzip.diff
+patch -p1 < ./../patch/5-4/patch1.patch
+patch -p1 < ./../patch/5-4/patch2.patch
+patch -p1 < ./../patch/5-4/gzip.diff
 ```
 
 ## 4. make 
