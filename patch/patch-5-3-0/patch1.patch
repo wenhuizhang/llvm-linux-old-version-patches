@@ -1,0 +1,17 @@
+433a434,435
+> BASH		= bash
+> KGZIP		= gzip
+482c484
+< 
+---
+> export KGZIP
+1022a1025,1029
+> libs-y2		:= $(patsubst %/, %/built-in.a, $(filter %/, $(libs-y)))
+> ifdef CONFIG_MODULES
+> libs-y1		:= $(filter-out %/, $(libs-y))
+> libs-y2		+= $(patsubst %/, %/lib.a, $(filter %/, $(libs-y)))
+> else
+1024c1031
+< libs-y2		:= $(patsubst %/, %/built-in.a, $(filter-out %.a, $(libs-y)))
+---
+> endif

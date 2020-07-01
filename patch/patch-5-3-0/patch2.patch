@@ -1,0 +1,7 @@
+54c54,57
+< 	/DISCARD/ : { *(.note*) }
+---
+> 	/DISCARD/	: {
+> 		*(.eh_frame)
+> 		*(.note*)
+> 	}
