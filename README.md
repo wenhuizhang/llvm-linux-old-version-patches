@@ -47,7 +47,9 @@ patch -p1 < ./../patch/5-4-38/gzip.diff
 For Linux 5.3.0
 ```
 cd linu5.3.0
-patch -p1 < ./../patch/5-3-0/patch.patch
+patch -p1 < ./../patch/5-3-0/patch1.patch
+patch -p1 < ./../patch/5-3-0/patch2.patch
+patch -p1 < ./../patch/5-3-0/patch3.patch
 ```
 
 ## 4. make 
@@ -57,6 +59,7 @@ patch -p1 < ./../patch/5-3-0/patch.patch
 // scripts/config --disable CONFIG_MODULE_SIG
 // scripts/config --disable CONFIG_DEBUG_INFO
 
+cp config .config
 export PATH=/usr/local/llvm-10/bin:$PATH
 make -j4 LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
 ```
