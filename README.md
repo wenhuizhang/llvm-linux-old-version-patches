@@ -26,11 +26,19 @@ sudo ninja install
 ```
 
 ## 3. add patch to linux and compile
-For Linux 5.4
+For Linux 5.4.38
 ```
-patch -p1 < ./../patch/5-4/patch1.patch
-patch -p1 < ./../patch/5-4/patch2.patch
-patch -p1 < ./../patch/5-4/gzip.diff
+cd linux-5.4.38
+patch -p1 < ./../patch/5-4-38/patch1.patch
+patch -p1 < ./../patch/5-4-38/patch2.patch
+patch -p1 < ./../patch/5-4-38/gzip.diff
+```
+For Linux 5.3.0
+```
+cd linu5.3.0
+patch -p1 < ./../patch/5-3-0/patch1.patch
+patch -p1 < ./../patch/5-3-0/patch2.patch
+patch -p1 < ./../patch/5-3-0/gzip.diff
 ```
 
 ## 4. make 
