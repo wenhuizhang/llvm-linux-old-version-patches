@@ -29,7 +29,9 @@ sudo cp ninja /usr/local/bin/
 sudo chmod a+rx /usr/local/bin/ninja
 ```
 
-## 2. install llvm 10.0
+## 2. Install LLVM
+
+### 2.1 install llvm 10.0
 ```
 sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
 // git clone https://github.com/llvm/llvm-project.git
@@ -41,6 +43,25 @@ cd build
 cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' \
 -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_WARNINGS=OFF \
 -DCMAKE_INSTALL_PREFIX=/usr/local/llvm-10 ../llvm
+
+ninja
+sudo ninja install
+```
+
+
+
+### 2.2 install llvm 9.0
+```
+sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
+git clone https://github.com/llvm/llvm-project.git
+cd llvm-project
+git checkout release/9.x
+mkdir build
+cd build
+
+cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' \
+-DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_WARNINGS=OFF \
+-DCMAKE_INSTALL_PREFIX=/usr/local/llvm-9 ../llvm
 
 ninja
 sudo ninja install
