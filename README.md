@@ -15,8 +15,13 @@ sudo apt update -q
 sudo apt-get update
 sudo apt-get upgrade
 ```
+Installl Ninja 
 
 ```
+sudo apt-get install python
+sudo apt-get update -y
+sudo apt-get install -y re2c
+
 git clone git://github.com/martine/ninja.git
 cd ninja/
 ./configure.py --bootstrap
