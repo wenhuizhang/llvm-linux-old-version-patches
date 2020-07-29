@@ -31,7 +31,7 @@ sudo chmod a+rx /usr/local/bin/ninja
 
 ## 2. Install LLVM
 
-### 2.1 install llvm 10.0
+### 2.1 install llvm 10.0 from git repo
 ```
 sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
 // git clone https://github.com/llvm/llvm-project.git
@@ -50,7 +50,7 @@ sudo ninja install
 
 
 
-### 2.2 install llvm 9.0
+### 2.2 install llvm 9.0 from git repo
 ```
 sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
 git clone https://github.com/llvm/llvm-project.git
@@ -65,6 +65,36 @@ cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' \
 
 ninja
 sudo ninja install
+```
+
+### 2.3 install llvm 9.0 from download 
+From ` https://releases.llvm.org/download.html `, download Download LLVM 9.0.0, ***llvm-9.0.0.src.tar.xz***
+
+```
+sudo apt-get install build-essential gcc-9-plugin-dev clang ninja-build cmake libncurses5-dev libelf-dev libssl-dev flex bison bc git pigz
+tar -xf  llvm-9.0.0.src.tar.xz
+cd llvm-9.0.0.src
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_TARGETS_TO_BUILD=X86 ..
+cmake --build .
+```
+
+Then you could (1)
+```
+export LLVM_HOME=/home/wenhui/llvm-9.0.0.src/
+```
+Or add above line to 
+```
+vim ~/.bashrc 
+source ~/.bashrc 
+echo $LLVM_HOME
+```
+Then install LLVM
+```
+cmake -DCMAKE_INSTALL_PREFIX=$LLVM_HOME -P cmake_install.cmake
+
 ```
 
 ## 3. add patch to linux and compile
