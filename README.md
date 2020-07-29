@@ -81,7 +81,7 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DLLVM_TARGETS_TO_BUILD=X86 ..
 cmake --build .
 ```
 
-Then you could (1)
+Then you could
 ```
 export LLVM_HOME=/home/wenhui/llvm-9.0.0.src/
 ```
