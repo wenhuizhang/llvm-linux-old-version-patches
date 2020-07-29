@@ -67,7 +67,7 @@ ninja
 sudo ninja install
 ```
 
-### 2.3 install llvm 9.0 from download 
+### 2.3 install llvm 9.0 from download (preferred)
 From ` https://releases.llvm.org/download.html `, download Download LLVM 9.0.0, ***llvm-9.0.0.src.tar.xz***
 
 ```
@@ -126,7 +126,15 @@ patch -p1 < ./../patch/5-3-0/patch3.patch
 // scripts/config --disable CONFIG_DEBUG_INFO
 
 cp config .config
+```
+```
 export PATH=/usr/local/llvm-10/bin:$PATH
+
+OR
+
+export PATH=/home/wenhui/llvm-10.0.0.src/build/bin:$PATH
+```
+```
 make -j4 LD=ld.lld HOSTLDFLAGS=-fuse-ld=lld KGZIP=pigz
 ```
 
