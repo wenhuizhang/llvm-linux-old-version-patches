@@ -83,7 +83,7 @@ cmake --build .
 
 Then you could
 ```
-export LLVM_HOME=/home/wenhui/llvm-9.0.0.src/
+export LLVM_HOME=/home/wenhui/llvm-9.0.0.src
 ```
 Or add above line to 
 ```
