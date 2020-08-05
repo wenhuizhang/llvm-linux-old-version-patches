@@ -101,6 +101,8 @@ cmake -DCMAKE_INSTALL_PREFIX=$LLVM_HOME -P cmake_install.cmake
 
 The code is already patched, if you would like to start from vanilla source code, this is where to get started.
 
+Download kernel source from here : https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/
+
 For Linux 5.4.38
 ```
 cd linux-5.4.38
