@@ -162,3 +162,10 @@ sudo make install
 sudo update-grub2
 sudo reboot
 ```
+
+
+# Ref:
+
+- Debian Install: https://apt.llvm.org/
+- opt usage: https://llvm.org/docs/CommandGuide/opt.html
+
