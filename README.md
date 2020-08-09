@@ -29,6 +29,12 @@ sudo cp ninja /usr/local/bin/
 sudo chmod a+rx /usr/local/bin/ninja
 ```
 
+
+change to gold linker if encounter memory outrage
+```
+sudo ln -s `which gold` /usr/local/bin/ld
+```
+
 ## 2. Install LLVM
 
 ### 2.1 install llvm 10.0 from git repo
