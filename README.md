@@ -40,9 +40,11 @@ git checkout release/10.x
 mkdir build
 cd build
 
-cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' \
+# cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' \
 -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_WARNINGS=OFF \
 -DCMAKE_INSTALL_PREFIX=/usr/local/llvm-10 ../llvm
+
+cmake -G Ninja -DLLVM_ENABLE_PROJECTS='clang;lld;compiler-rt' -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_WARNINGS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local/llvm-10 ../llvm
 
 ninja
 sudo ninja install
