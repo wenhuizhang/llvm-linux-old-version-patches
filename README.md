@@ -2,7 +2,8 @@
 
 ## 1. install gcc 9 and ninja
 ```
-sudo add-apt-repository ppa:jonathonf/gcc-9.0
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt update
 sudo apt-get install gcc-9 g++-9
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
@@ -10,7 +11,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /u
 
 if on Ubuntu 20.04, gcc 9.3.0. 
 ```  
-sudo apt-add-repository -r ppa:jonathonf/gcc-9.0
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt update -q
 sudo apt-get update
 sudo apt-get upgrade
